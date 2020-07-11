@@ -8,7 +8,7 @@ import (
 
 func init() {
 	// load .env file
-	err := godotenv.Load(".env_machine_host")
+	err := godotenv.Load()
 
 	if err != nil {
 		log.Println("[!] load dot.env error ->", err.Error())
