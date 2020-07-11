@@ -44,15 +44,15 @@ func AuthProviderMiddleware() gin.HandlerFunc {
 			proxy.ServeHTTP(c.Writer, c.Request)
 		}
 
-		// redirect user to login page if not logged in
-		isLoggedIn := con.IsLoggedIn(c)
+		// TODO: redirect user to login page if not logged in
+		// isLoggedIn := con.IsLoggedIn(c)
 
-		if c.Request.URL.Path != "/login" && len(c.Query("request")) == 0 {
-			if !isLoggedIn {
-				c.Redirect(http.StatusTemporaryRedirect, "/login")
-				return
-			}
-		}
+		// if c.Request.URL.Path != "/login" && len(c.Query("request")) == 0 {
+		// 	if !isLoggedIn {
+		// 		c.Redirect(http.StatusTemporaryRedirect, "/login")
+		// 		return
+		// 	}
+		// }
 
 		c.Next()
 	}
