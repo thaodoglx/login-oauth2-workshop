@@ -21,7 +21,7 @@ $ make run
 ```
 2. Open the Login Provider http://127.0.0.1:9000
 3. Access http://127.0.0.1:9000/registration for register new user, and http://127.0.0.1:9000/login for login
-4. You can create new OAuth 2.0 client on `Credentials` route.
+4. You can create new OAuth 2.0 client on `Credentials` menu.
 
 ## B. Remove Service
 ```sh
