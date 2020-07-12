@@ -1,5 +1,5 @@
 # Login Service and OAuth 2.0 Service Workshop
-This repository contains source code of Login Provider that create with Go Programming Language and implement Login Service using ORY Kratos (Cloud Native Identity Management) and OAuth 2.0 Service using ORY Hydra (OAuth 2.0 Provider).
+This repository contains source code of Login Provider that created with Go Programming Language and implement Login Service using ORY Kratos (Cloud Native Identity Management) and OAuth 2.0 Service using ORY Hydra (OAuth 2.0 Provider).
 
 # Prerequisite
 
