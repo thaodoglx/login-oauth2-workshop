@@ -5,6 +5,7 @@ import (
 	"net/url"
 	"os"
 
+	runtime "github.com/go-openapi/runtime/client"
 	kratos "github.com/ory/kratos-client-go/client"
 )
 
@@ -15,11 +16,8 @@ var (
 	// KratosPublicAPI is Kratos public endpoint
 	KratosPublicAPI string
 
-	// AdminKratosClient sdk
-	AdminKratosClient *kratos.OryKratos
-
-	// PublicKratosClient sdk
-	PublicKratosClient *kratos.OryKratos
+	// KratosClient sdk
+	KratosClient *kratos.OryKratos
 )
 
 // LoadKratosConfiguration for load all kratos configuration variables from .env files and define several values.
@@ -40,7 +38,7 @@ func LoadKratosConfiguration() {
 		return
 	}
 
-	AdminKratosClient = kratos.NewHTTPClientWithConfig(
+	KratosClient = kratos.NewHTTPClientWithConfig(
 		nil,
 		&kratos.TransportConfig{
 			Schemes:  []string{kratosAdminHost.Scheme},
@@ -49,12 +47,10 @@ func LoadKratosConfiguration() {
 		},
 	)
 
-	PublicKratosClient = kratos.NewHTTPClientWithConfig(
-		nil,
-		&kratos.TransportConfig{
-			Schemes:  []string{kratosPublicHost.Scheme},
-			Host:     kratosPublicHost.Host,
-			BasePath: kratosPublicHost.Path,
-		},
+	publicTransport := runtime.New(
+		kratosPublicHost.Host,
+		kratosPublicHost.Path,
+		[]string{kratosPublicHost.Scheme},
 	)
+	KratosClient.Public.SetTransport(publicTransport)
 }
