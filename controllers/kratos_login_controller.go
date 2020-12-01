@@ -24,7 +24,7 @@ func Login(c *gin.Context) {
 	params := common.NewGetSelfServiceBrowserLoginRequestParams()
 	params.WithRequest(getRequest)
 
-	resp, err := AdminKratosClient.Common.GetSelfServiceBrowserLoginRequest(params)
+	resp, err := KratosClient.Common.GetSelfServiceBrowserLoginRequest(params)
 	if err != nil {
 		log.Println("[!] get self-service browser login request error ->", err.Error())
 		return

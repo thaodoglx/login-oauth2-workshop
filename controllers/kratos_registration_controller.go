@@ -24,7 +24,7 @@ func Registration(c *gin.Context) {
 	params := common.NewGetSelfServiceBrowserRegistrationRequestParams()
 	params.WithRequest(getRequest)
 
-	resp, err := AdminKratosClient.Common.GetSelfServiceBrowserRegistrationRequest(params)
+	resp, err := KratosClient.Common.GetSelfServiceBrowserRegistrationRequest(params)
 	if err != nil {
 		log.Println("[!] get self-service browser registration request error ->", err.Error())
 		return
