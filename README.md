@@ -8,7 +8,7 @@ For run this application, first you need to install `Docker` and `Docker Compose
 1. Login Provider service (Go source code).
 2. ORY Kratos Service (user management service)
 3. ORY Hydra Service (OAuth 2.0 Provider)
-4. Database Service (postgreqsql server)
+4. Database Service (PostgreSQL as database server)
 
 Each service above will run as a Docker Service using `docker-compose` command.
 
