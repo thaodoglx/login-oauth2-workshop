@@ -30,4 +30,4 @@ $ make down
 
 # Contributor
 
-Anggit M Ginanjar - Software Developer <anggit@outlook.com>.
+Anggit M Ginanjar - Software Developer <anggit.ginanjar@outlook.com>.
