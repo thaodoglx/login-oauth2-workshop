@@ -3,7 +3,7 @@ module gl.atisicloud.com/dev/sim-infinyscloud-authentication-provider
 go 1.13
 
 require (
-	github.com/gin-gonic/gin v1.6.3
+	github.com/gin-gonic/gin v1.7.0
 	github.com/go-openapi/loads v0.19.5 // indirect
 	github.com/go-openapi/runtime v0.19.15
 	github.com/golang/protobuf v1.4.2 // indirect
